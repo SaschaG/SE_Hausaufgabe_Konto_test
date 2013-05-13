@@ -39,7 +39,8 @@ public class Konto_Test {
 
 	@Test(expected = RuntimeException.class)
 	public void abheben_ungenügent() {
-
+		// konto stand erfassen und +200 abnehmen
+		konto.auszahlen(konto.getGuthaben() + 200);
 	}
 
 	@Test
