@@ -20,7 +20,9 @@ public class Konto_Test {
 
 	@Test
 	public void einzahlen() {
-
+		int alter_stand = konto.getGuthaben();
+		konto.einzahlen(200);
+		assertTrue(alter_stand + 200 == konto.getGuthaben());
 	}
 
 	@Test
