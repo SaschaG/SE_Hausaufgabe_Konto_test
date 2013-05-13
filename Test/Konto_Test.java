@@ -27,6 +27,13 @@ public class Konto_Test {
 
 	@Test
 	public void abheben_ausreichend() {
+		// erst 200 aufs konto einzahlen um sicher zu gehen, dann 100 wieder
+		// abnehmen und schauen ob wir eine Differenz von 100 haben zum
+		// vorherigen wert
+		int alter_stand = konto.getGuthaben();
+		konto.einzahlen(200);
+		konto.auszahlen(100);
+		assertTrue(konto.getGuthaben() - 100 == alter_stand);
 
 	}
 
