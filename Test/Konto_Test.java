@@ -45,7 +45,11 @@ public class Konto_Test {
 
 	@Test
 	public void mehrfach_einzahlen_komplett_abheben() {
-
+		for (int i = 0; i < 10; i++) {
+			konto.einzahlen(i*20);
+		}
+		konto.auszahlen(konto.getGuthaben());
+		assertTrue(konto.getGuthaben() == 0);
 	}
 
 }
