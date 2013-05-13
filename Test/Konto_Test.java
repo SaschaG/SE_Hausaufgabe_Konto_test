@@ -15,6 +15,7 @@ public class Konto_Test {
 
 	@Test
 	public void Startguthaben() {
+		assertNotNull(konto);
 	}
 
 	@Test
